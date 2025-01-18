@@ -1,9 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1E1E1E;
+            margin: 0;
+            padding: 0;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .profile-container {
+            background: #252626;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid #FFFFFF;
+            background-color: #E4BA66; /* Light pink default color */
+            display: inline-block;
+        }
+        .edit-btn {
+            background-color: #CFDADE;
+            color: #193C42;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px auto;
+            display: block;
+            text-align: center;
+        }
+        .edit-btn:hover {
+            background-color: #193C42;
+            color: #CFDADE;
+        }
+        .save-btn {
+            background-color: #CFDADE;
+            color: #193C42;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px auto;
+            display: none;
+            text-align: center;
+        }
+        .save-btn:hover {
+            background-color: #193C42;
+            color: #CFDADE;
+        }
+        .file-upload-container {
+            position: relative;
+            overflow: hidden;
+            display: none; /* Initially hidden */
+        }
+        .upload-btn {
+            background-color: #CFDADE;
+            color: #193C42;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .upload-btn:hover {
+            background-color: #193C42;
+            color: #CFDADE;
+        }
+        .file-upload-container input[type="file"] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+        }
+        .bio-area {
+            width: 90%;
+            height: 120px;
+            background-color: #CFDADE;
+            border: 1px solid #444;
+            border-radius: 10px;
+            color: #193C42;
+            padding: 15px;
+            margin-bottom: 20px;
+            resize: none;
+            font-size: 16px;
+            display: none;
+        }
+        h2 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        #bioDisplay {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #ecf0f1;
+        }
+        #hoursPracticed {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ecf0f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h2>Your Profile</h2>
+        <img src="#" alt="" class="profile-image" id="profileImage">
+        <button class="edit-btn" id="editBtn">Edit Profile</button>
+        <div class="file-upload-container" id="fileUploadContainer">
+            <button class="upload-btn">Change Photo</button>
+            <input type="file" id="imageUpload" accept="image/*">
+        </div>
+        <textarea class="bio-area" id="bio" placeholder="Write your bio..."></textarea>
+        <button class="save-btn" id="saveBtn">Save Profile</button>
+        <div id="bioDisplay"></div>
+        <div id="hoursPracticed">Hours Practiced: <span id="hoursValue">0</span></div>
+    </div>
+
+    <script>
+        const editBtn = document.getElementById('editBtn');
+        const fileUploadContainer = document.getElementById('fileUploadContainer');
+        const imageUpload = document.getElementById('imageUpload');
+        const profileImage = document.getElementById('profileImage');
+        const bioArea = document.getElementById('bio');
+        const saveBtn = document.getElementById('saveBtn');
+        const bioDisplay = document.getElementById('bioDisplay');
+
+        // Enable editing mode
+        editBtn.addEventListener('click', () => {
+            fileUploadContainer.style.display = 'block';
+            bioArea.style.display = 'block';
+            saveBtn.style.display = 'block';
+            editBtn.style.display = 'none';
+        });
+
+        // Handle image upload and preview
+        imageUpload.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    profileImage.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Handle save button (can add backend functionality here)
+        saveBtn.addEventListener('click', () => {
+            const bio = bioArea.value;
+            bioDisplay.textContent = `${bio}`;
+            fileUploadContainer.style.display = 'none';
+            bioArea.style.display = 'none';
+            saveBtn.style.display = 'none';
+            editBtn.style.display = 'block';
+        });
+
+        // Placeholder for future implementation of updating hours practiced
+        const hoursValue = document.getElementById('hoursValue');
+        // hoursValue.textContent = "Update with backend data or user input";
+    </script>
+</body>
 </html>

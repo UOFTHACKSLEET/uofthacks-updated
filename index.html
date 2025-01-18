@@ -116,6 +116,12 @@
             font-size: 16px;
             color: #ecf0f1;
         }
+        #hoursPracticed {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ecf0f1;
+        }
     </style>
 </head>
 <body>
@@ -130,6 +136,7 @@
         <textarea class="bio-area" id="bio" placeholder="Write your bio..."></textarea>
         <button class="save-btn" id="saveBtn">Save Profile</button>
         <div id="bioDisplay"></div>
+        <div id="hoursPracticed">Hours Practiced: <span id="hoursValue">0</span></div>
     </div>
 
     <script>
@@ -170,6 +177,10 @@
             saveBtn.style.display = 'none';
             editBtn.style.display = 'block';
         });
+
+        // Placeholder for future implementation of updating hours practiced
+        const hoursValue = document.getElementById('hoursValue');
+        // hoursValue.textContent = "Update with backend data or user input";
     </script>
 </body>
 </html>

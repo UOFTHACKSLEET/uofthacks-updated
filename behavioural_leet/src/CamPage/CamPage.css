@@ -1,0 +1,11 @@
+.interview-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  padding-top: 20px;
+}
+cam-container {
+  height: 100%;
+}

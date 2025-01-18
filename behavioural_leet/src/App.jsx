@@ -1,8 +1,8 @@
-import ProblemCard from "./ProblemCard";
 import "./App.css";
+import CamPage from "./CamPage/CamPage";
 
 function App() {
-  return <ProblemCard></ProblemCard>;
+  return <CamPage question="Tell us about a time you were challenged" />;
 }
 
 export default App;

@@ -3,6 +3,7 @@ import CamPage from "./CamPage/CamPage";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import Profile from "./Profile/Profile";
+import Problems from "./Problems/Problems";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           index
           element={<CamPage question="tell us about a time you skibidied" />}
         />
+        <Route path="/problems" element={<Problems />} />
         <Route path="/profile" element={<Profile />} />
       </Route>
     </Routes>

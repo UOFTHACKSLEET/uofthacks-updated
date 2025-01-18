@@ -1,0 +1,36 @@
+.sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  line-height: 30px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: fit-content;
+  background-color: #333;
+  color: white;
+  padding: 0 15px;
+  font-size: 20px;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  margin-top: -20px;
+  list-style-type: none;
+  padding: 0;
+}
+.sidebar a {
+  width: fit-content;
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+}
+
+.sidebar a:hover {
+  color: rgb(120, 179, 160);
+}
+.sidebar a.active {
+  color: rgb(120, 179, 160);
+}

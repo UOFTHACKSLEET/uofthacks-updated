@@ -1,0 +1,110 @@
+.profile-container {
+  background: #252626;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  height: fit-content;
+  padding: 20px;
+  text-align: center;
+}
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #ffffff;
+  background-color: #e4ba66;
+  display: inline-block;
+}
+.edit-btn {
+  background-color: #cfdade;
+  color: #193c42;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px auto;
+  display: block;
+  text-align: center;
+}
+.edit-btn:hover {
+  background-color: #193c42;
+  color: #cfdade;
+}
+.save-btn {
+  background-color: #cfdade;
+  color: #193c42;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px auto;
+  display: block;
+  text-align: center;
+}
+.save-btn:hover {
+  background-color: #193c42;
+  color: #cfdade;
+}
+.file-upload-container {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.upload-btn {
+  background-color: #cfdade;
+  display: block;
+  width: 30%;
+  color: #193c42;
+  padding: 10px 20px;
+  margin: 0 auto 10px auto;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.upload-btn:hover {
+  background-color: #193c42;
+  color: #cfdade;
+}
+.file-upload-container input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+.bio-area {
+  width: 90%;
+  height: 120px;
+  background-color: #cfdade;
+  border: 1px solid #444;
+  border-radius: 10px;
+  color: #193c42;
+  padding: 15px;
+  margin-bottom: 20px;
+  resize: none;
+  font-size: 16px;
+  display: block;
+}
+h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+#bioDisplay {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ecf0f1;
+}
+#hoursPracticed {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ecf0f1;
+}

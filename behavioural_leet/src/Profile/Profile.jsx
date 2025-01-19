@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Profile.css";
+
 const Profile = () => {
   const [isEditing, setIsEditing] = React.useState(false);
   const [profileImage, setProfileImage] = React.useState("");
   const [bio, setBio] = React.useState("");
   const [hoursPracticed, setHoursPracticed] = React.useState(0);
+  const [resume, setResume] = React.useState(null); // State to store the uploaded resume
+  const [resumeName, setResumeName] = React.useState(""); // State to store the resume name for display
 
   const handleEditClick = () => {
     setIsEditing(true);
+  };
+
+  const handleResumeUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setResume(file); // Store the resume file for later use
+      setResumeName(file.name); // Store the resume name for display
+      console.log("Resume uploaded:", file.name);
+    }
   };
 
   const handleImageUpload = (event) => {
@@ -58,6 +70,17 @@ const Profile = () => {
             value={bio}
             onChange={(e) => setBio(e.target.value)}
           ></textarea>
+          <label className="upload-btn" htmlFor="resumeUpload">
+            Upload Resume
+          </label>
+          <input
+            type="file"
+            id="resumeUpload"
+            accept=".pdf,.doc,.docx"
+            onChange={handleResumeUpload}
+            style={{ display: "none" }}
+          />
+          {resumeName && <p>Uploaded Resume: {resumeName}</p>} {/* Show resume name */}
           <button className="save-btn" id="saveBtn" onClick={handleSaveClick}>
             Save Profile
           </button>
@@ -67,6 +90,11 @@ const Profile = () => {
       <div id="hoursPracticed">
         Hours Practiced: <span id="hoursValue">{hoursPracticed}</span>
       </div>
+      {!isEditing && resumeName && (
+        <div>
+          <p>Resume on file: {resumeName}</p> {/* Show saved resume name */}
+        </div>
+      )}
     </div>
   );
 };

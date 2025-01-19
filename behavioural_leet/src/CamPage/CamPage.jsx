@@ -1,9 +1,11 @@
 import React from "react";
 import CameraFeed from "./CameraFeed";
 import { useState, useEffect } from "react";
+import { useQuestion } from "./QuestionProvider";
 
-const CamPage = ({ question }) => {
+const CamPage = () => {
   const [timeLeft, setTimeLeft] = useState(15);
+  const { question, setQuestion } = useQuestion();
   useEffect(() => {
     if (timeLeft === 0) return;
     const timerId = setInterval(() => {

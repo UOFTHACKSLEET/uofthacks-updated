@@ -2,6 +2,7 @@
   padding: 10px;
   border-radius: 10px;
   background-color: #252626;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   width: 300px;
   height: 150px;
 
@@ -15,6 +16,11 @@
     text-decoration: none;
     color: black;
     padding: 5px 10px;
+
+    &:hover {
+      background-color: rgb(97, 136, 145);
+      color: white;
+    }
   }
 }
 .problems-container {

@@ -13,6 +13,7 @@
   padding: 0 15px;
   font-size: 20px;
   overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar ul {
@@ -31,6 +32,6 @@
 .sidebar a:hover {
   color: rgb(120, 179, 160);
 }
-.sidebar a.active {
+a.active {
   color: rgb(120, 179, 160);
 }

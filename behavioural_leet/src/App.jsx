@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import Profile from "./Profile/Profile";
 import Problems from "./Problems/Problems";
+import ProblemList from "./ProblemList/ProblemList";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           }
         />
         <Route path="/problems/" element={<Problems />} />
+        <Route path="/problem-list/" element={<ProblemList />} />
         <Route path="/profile/" element={<Profile />} />
       </Route>
     </Routes>

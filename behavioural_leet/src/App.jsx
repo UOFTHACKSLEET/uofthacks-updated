@@ -13,8 +13,8 @@ function App() {
           index
           element={<CamPage question="tell us about a time you skibidied" />}
         />
-        <Route path="/problems" element={<Problems />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/problems/" element={<Problems />} />
+        <Route path="/profile/" element={<Profile />} />
       </Route>
     </Routes>
   );

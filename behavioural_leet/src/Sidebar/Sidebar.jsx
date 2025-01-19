@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
-import { faUser, faBook } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUser,
+  faBook,
+  faSquareCheck,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Sidebar = () => {
@@ -11,6 +15,11 @@ const Sidebar = () => {
         <li>
           <Link to="/problems">
             <FontAwesomeIcon icon={faBook} />
+          </Link>
+        </li>
+        <li>
+          <Link to="/problem-list">
+            <FontAwesomeIcon icon={faSquareCheck} />
           </Link>
         </li>
         <li>

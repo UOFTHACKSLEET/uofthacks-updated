@@ -1,4 +1,7 @@
 .interview-container {
+  h1 {
+    font-size: 25px;
+  }
   display: flex;
   flex-direction: column;
   justify-content: center;

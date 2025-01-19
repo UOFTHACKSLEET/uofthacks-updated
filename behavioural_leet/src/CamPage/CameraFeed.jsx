@@ -97,7 +97,8 @@ const CameraFeed = () => {
       playsInline
       muted
       style={{
-        height: "100%",
+        maxHeight: "100%",
+        width: "100%",
         maxWidth: "720px",
         border: "4px solid #5DA399",
         borderRadius: "20px",

@@ -1,0 +1,85 @@
+.problem-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+    border-radius: 10px;
+    width: 350px;
+    align-items: flex-start;
+    min-height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+
+  }
+  
+.problem-circle {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto;
+    align-self: center;
+    transform: translateX(-10px); /* Adjust the value as needed */
+}
+
+  
+  .problem-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .problem-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    white-space: nowrap;
+    text-align: left;
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.5rem;
+  }
+  
+  .problem-header h2 {
+    margin: 0;
+    margin-top:30px;
+    color: #ffffff;
+  }
+  
+  .problems-button {
+    background-color: transparent;
+    border: 1px solid #666666;
+    color: #cccccc;
+    border-radius: 20px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+  .problems-button:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+  
+  .problem-description {
+    color: #999999;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  
+.start-interview-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 5px; 
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 10px; /* Adjust the value as needed */
+}
+
+  .start-interview-button:hover {
+    background-color: #aaaaaa;
+  }
+  

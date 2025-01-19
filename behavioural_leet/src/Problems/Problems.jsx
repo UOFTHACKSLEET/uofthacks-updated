@@ -7,17 +7,17 @@ const Problems = () => {
     {
       id: 1,
       category: "Leadership",
-      description: "Description for problem set 1",
+      description: "Speak confidently about experiences",
     },
     {
       id: 2,
       category: "Problem Solving",
-      description: "Description for problem set 2",
+      description: "Communicate critical thinking abilities",
     },
     {
       id: 3,
-      category: "Adaptability",
-      description: "Description for problem set 3",
+      category: "Teamwork",
+      description: "Interpersonal and collaboration skills",
     },
   ];
 

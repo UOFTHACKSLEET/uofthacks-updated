@@ -101,7 +101,7 @@ const CameraFeed = () => {
         width: "100%",
         maxWidth: "720px",
         border: "4px solid #5DA399",
-        borderRadius: "20px",
+        borderRadius: "10px",
       }}
     />
   );

@@ -52,7 +52,7 @@ const CameraFeed = () => {
           tracks.forEach((track) => track.stop());
         }
         navigate("/problems");
-      }, 15000); // stop recording after 30 seconds
+      }, 15000); // stop recording after 15 seconds
     };
 
     startCamera();
@@ -98,6 +98,7 @@ const CameraFeed = () => {
       muted
       style={{
         height: "100%",
+        maxWidth: "720px",
         border: "4px solid #5DA399",
         borderRadius: "20px",
       }}

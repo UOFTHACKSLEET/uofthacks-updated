@@ -21,7 +21,7 @@ const ProblemList = () => {
     "Give an example of a time when you had to make a difficult decision.",
     "Describe your process for solving problems. ",
     "Describe a time when you successfully led a team to achieve a challenging goal.",
-    "Share an example of how you motivated others to accomplish a task or pro",
+    "Share an example of how you motivated others to accomplish a task or project.",
     "Discuss a time when you delegated responsibilities effectively.",
     "Share a time when you identified an inefficiency and implemented a solution.",
   ];

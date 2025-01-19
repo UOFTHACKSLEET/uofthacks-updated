@@ -51,7 +51,7 @@ const CameraFeed = () => {
           const tracks = videoRef.current.srcObject.getTracks();
           tracks.forEach((track) => track.stop());
         }
-        navigate("/problems");
+        navigate("/feedback");
       }, 15000); // stop recording after 15 seconds
     };
 

@@ -1,13 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./Problems.css";
+import { useNavigate } from "react-router-dom"; // Ensure you're using React Router
+import "./ProblemCard.css";
 
-const ProblemCard = ({ category, description }) => {
+const ProblemCard = ({ category, description, color, link }) => {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate(link); // Navigate to the link provided
+  };
+
   return (
     <div className="problem-card">
-      <h2>{category}</h2>
-      <p>{description}</p>
-      <Link to="/">Start Interview</Link>
+      <div className="problem-circle" style={{ backgroundColor: color }} />
+      <div className="problem-content">
+        <div className="problem-header">
+          <h2>{category}</h2>
+          <button className="problems-button">Problems</button>
+        </div>
+        <p className="problem-description">{description}</p>
+        <button
+          className="start-interview-button"
+          onClick={handleNavigation} // Navigate to camera page
+        >
+          Start interview
+        </button>
+      </div>
     </div>
   );
 };

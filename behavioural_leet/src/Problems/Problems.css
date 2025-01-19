@@ -1,42 +1,22 @@
-.problem-card {
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #252626;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  width: 300px;
-  height: 150px;
-
-  a {
-    display: block;
-    width: fit-content;
-    margin: auto;
-    border: 1px solid rgb(84, 159, 156);
-    border-radius: 5px;
-    background-color: white;
-    text-decoration: none;
-    color: black;
-    padding: 5px 10px;
-
-    &:hover {
-      background-color: rgb(97, 136, 145);
-      color: white;
-    }
-  }
-}
 .problems-container {
-  margin-top: -20%;
+  padding-top: 50px;
   text-align: center;
-  h1 {
-    margin-top: 0;
-  }
-  p {
-    color: #858585;
-  }
 }
+
+.problems-container h1 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.problems-container p {
+  color: #858585;
+}
+
+/* Grid layout: 3 columns wide, auto-rows, 2 total rows with 6 items */
 .cards-container {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; 
+  max-width: 1200px; /* optional, for centering */
+  margin: 50px auto 0; /* top margin + center horizontally */
 }

@@ -5,6 +5,7 @@ import Layout from "./Layout";
 import Profile from "./Profile/Profile";
 import Problems from "./Problems/Problems";
 import ProblemList from "./ProblemList/ProblemList";
+import FeedbackPage from "./Feedback/Feedback";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         />
         <Route path="/problems/" element={<Problems />} />
         <Route path="/problem-list/" element={<ProblemList />} />
+        <Route path="/feedback/" element={<FeedbackPage />} />
         <Route path="/profile/" element={<Profile />} />
       </Route>
     </Routes>

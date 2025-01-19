@@ -3,6 +3,7 @@ from pydub import AudioSegment
 import matplotlib.pyplot as plt
 from scipy.ndimage import uniform_filter1d
 from tqdm import tqdm
+import json 
 
 def detect_pauses_and_talking(file_path, threshold=-70, min_pause_duration=1, plot_smoothed=True):
     """
@@ -36,8 +37,25 @@ def detect_pauses_and_talking(file_path, threshold=-70, min_pause_duration=1, pl
     is_pause = smoothed_decibels < threshold
     time = np.linspace(0, len(samples) / sr, num=len(samples))
     
-    print(decibels)
-    print(time)
+    # Get every 50th entry (adjusting by indexing with step of 50)
+    decibels_filtered = decibels[::50]  # Every 50th value
+    time_filtered = time[::50]  # Every 50th time value
+
+    # Create a list of dictionaries with id, decibel, and time
+    data = []
+    for i in range(len(time_filtered)):
+        data.append({
+            "id": i + 1,
+            "decibel": float(decibels_filtered[i]),
+            "time": float(time_filtered[i])  # Leave time as float
+        })
+
+    # Write the data to a JS file in the required format
+    with open('../../database/data.js', 'w') as js_file:
+        js_file.write('export const Data = ')
+        json.dump(data, js_file, indent=4)
+        js_file.write(';')
+
     
     # Initialize pause detection variables
     min_pause_samples = int(min_pause_duration * sr)

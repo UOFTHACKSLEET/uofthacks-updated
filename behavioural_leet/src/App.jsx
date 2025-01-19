@@ -11,7 +11,9 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route
           index
-          element={<CamPage question="tell us about a time you skibidied" />}
+          element={
+            <CamPage question="Tell us about a time you resolved a group conflict" />
+          }
         />
         <Route path="/problems/" element={<Problems />} />
         <Route path="/profile/" element={<Profile />} />

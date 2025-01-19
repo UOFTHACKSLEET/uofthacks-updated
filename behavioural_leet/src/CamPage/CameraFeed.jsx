@@ -1,10 +1,12 @@
 import React, { useRef, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./CamPage.css";
 
 const CameraFeed = () => {
   const videoRef = useRef(null);
   const mediaRecorderRef = useRef(null);
   const [recordedChunks, setRecordedChunks] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const startCamera = async () => {
@@ -39,16 +41,35 @@ const CameraFeed = () => {
       mediaRecorderRef.current.start();
 
       setTimeout(() => {
-        mediaRecorderRef.current.stop();
-      }, 30000); // stop recording after 30 seconds
+        if (
+          mediaRecorderRef.current &&
+          mediaRecorderRef.current.state !== "inactive"
+        ) {
+          mediaRecorderRef.current.stop();
+        }
+        if (videoRef.current && videoRef.current.srcObject) {
+          const tracks = videoRef.current.srcObject.getTracks();
+          tracks.forEach((track) => track.stop());
+        }
+        navigate("/problems");
+      }, 15000); // stop recording after 30 seconds
     };
 
     startCamera();
 
     return () => {
+      // Stop video and audio tracks
       if (videoRef.current && videoRef.current.srcObject) {
         const tracks = videoRef.current.srcObject.getTracks();
         tracks.forEach((track) => track.stop());
+      }
+
+      // Stop the MediaRecorder
+      if (
+        mediaRecorderRef.current &&
+        mediaRecorderRef.current.state !== "inactive"
+      ) {
+        mediaRecorderRef.current.stop();
       }
     };
   }, []);

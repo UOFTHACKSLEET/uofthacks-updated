@@ -80,7 +80,8 @@ const Profile = () => {
             onChange={handleResumeUpload}
             style={{ display: "none" }}
           />
-          {resumeName && <p>Uploaded Resume: {resumeName}</p>} {/* Show resume name */}
+          {resumeName && <p>Uploaded Resume: {resumeName}</p>}{" "}
+          {/* Show resume name */}
           <button className="save-btn" id="saveBtn" onClick={handleSaveClick}>
             Save Profile
           </button>

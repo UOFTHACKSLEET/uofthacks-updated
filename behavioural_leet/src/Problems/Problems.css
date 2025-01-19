@@ -1,5 +1,5 @@
 .problems-container {
-  padding-top: 50px;
+  padding-top: 0;
   text-align: center;
 }
 
@@ -16,7 +16,7 @@
 .cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px; 
+  gap: 20px;
   max-width: 1200px; /* optional, for centering */
   margin: 50px auto 0; /* top margin + center horizontally */
 }

@@ -10,11 +10,12 @@ app.config['UPLOAD_FOLDER'] = './uploads'
 def users(): 
     return jsonify(
         {
-            "users": [
-                'zach', 
-                'william', 
-                'brian'
-            ]
+            "wpm": 100, 
+            "tips": [
+                "Speak clearly", 
+                "Eat clearly"
+            ],
+            "resume": "I think you should use statistics to show your impact"
         }
     )
 

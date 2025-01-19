@@ -6,23 +6,22 @@ import Profile from "./Profile/Profile";
 import Problems from "./Problems/Problems";
 import ProblemList from "./ProblemList/ProblemList";
 import FeedbackPage from "./Feedback/Feedback";
+import { useState } from "react";
+import { QuestionProvider } from "./CamPage/QuestionProvider";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route
-          index
-          element={
-            <CamPage question="Tell us about a time you resolved a group conflict" />
-          }
-        />
-        <Route path="/problems/" element={<Problems />} />
-        <Route path="/problem-list/" element={<ProblemList />} />
-        <Route path="/feedback/" element={<FeedbackPage />} />
-        <Route path="/profile/" element={<Profile />} />
-      </Route>
-    </Routes>
+    <QuestionProvider>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<CamPage />} />
+          <Route path="/problems/" element={<Problems />} />
+          <Route path="/problem-list/" element={<ProblemList />} />
+          <Route path="/feedback/" element={<FeedbackPage />} />
+          <Route path="/profile/" element={<Profile />} />
+        </Route>
+      </Routes>
+    </QuestionProvider>
   );
 }
 

@@ -56,10 +56,10 @@ const Problems = () => {
 
   return (
     <div className="problems-container">
-      <h1 style={{ fontSize: "3.5em" }}>
+      <h1 style={{ fontSize: "3.2em", marginBottom: "15px" }}>
         Master Your <span style={{ color: "#17C3B2" }}>Interview</span> Skills
       </h1>
-      <p style={{ fontSize: "1.5em" }}>
+      <p style={{ fontSize: "1.2em" }}>
         Practice behavioral interview questions and get instant feedback to
         improve your responses.
       </p>

@@ -57,7 +57,7 @@ const Problems = () => {
   return (
     <div className="problems-container">
       <h1 style={{ fontSize: "3.2em", marginBottom: "15px" }}>
-        Master Your <span style={{ color: "#17C3B2" }}>Interview</span> Skills
+      <span style={{ color: "#17C3B2" }}>Refyne</span> Your Interview Skills
       </h1>
       <p style={{ fontSize: "1.2em" }}>
         Practice behavioral interview questions and get instant feedback to

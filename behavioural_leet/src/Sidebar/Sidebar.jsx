@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Sidebar = () => {
   return (
     <div className="sidebar">
+      <img src="../icon.png" alt="Icon" className="sidebar-icon" />
       <ul>
         <li>
           <Link to="/problems">

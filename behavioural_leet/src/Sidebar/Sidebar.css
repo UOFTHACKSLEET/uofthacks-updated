@@ -16,6 +16,15 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.sidebar-icon{
+  position: absolute; 
+  justify-self: start;
+  align-self: start; 
+  /* top: 5;  */
+  /* left: 5;  */
+  max-width: 100%; 
+}
+
 .sidebar ul {
   margin-top: -20px;
   list-style-type: none;

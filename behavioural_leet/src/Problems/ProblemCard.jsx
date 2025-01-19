@@ -1,11 +1,20 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Ensure you're using React Router
+import { useNavigate } from "react-router-dom";
+import { useQuestion } from "../CamPage/QuestionProvider";
 import "./ProblemCard.css";
 
-const ProblemCard = ({ category, description, color, link }) => {
+const ProblemCard = ({
+  category,
+  description,
+  color,
+  defaultQuestion,
+  link,
+}) => {
   const navigate = useNavigate();
+  const { question, setQuestion } = useQuestion();
 
   const handleNavigation = () => {
+    setQuestion(defaultQuestion);
     navigate(link); // Navigate to the link provided
   };
 

@@ -1,12 +1,16 @@
 import React from "react";
 import CamPage from "../CamPage/CamPage";
 import { useState } from "react";
+import { useQuestion } from "../CamPage/QuestionProvider";
 import "./ProblemList.css";
+import { useNavigate } from "react-router-dom";
 // import { problems } from "../assets/problems.jsx";
 
 const ProblemList = () => {
-  const [currentProblem, setCurrentProblem] = useState("");
+  // const [currentProblem, setCurrentProblem] = useState("");
   const [interviewOn, setInterviewOn] = useState(false);
+  const navigate = useNavigate();
+  const { question, setQuestion } = useQuestion();
 
   const problems = [
     "Tell me about a time you had a conflict with a team member.",
@@ -23,8 +27,9 @@ const ProblemList = () => {
   ];
 
   const handleProblemClick = (problem) => {
-    setCurrentProblem(problem);
-    setInterviewOn(true);
+    setQuestion(problem);
+    // setInterviewOn(true);
+    navigate("/");
   };
 
   return (
@@ -41,12 +46,7 @@ const ProblemList = () => {
           </ul>
         </div>
       )}
-      {interviewOn && (
-        <CamPage
-          question={currentProblem}
-          onBack={() => setInterviewOn(false)}
-        />
-      )}
+      {interviewOn && <CamPage onBack={() => setInterviewOn(false)} />}
     </>
   );
 };

@@ -106,9 +106,9 @@ const Profile = () => {
         </>
       )}
       {!isEditing && <div id="bioDisplay">{bio}</div>}
-      <div id="hoursPracticed">
+      {/* <div id="hoursPracticed">
         Hours Practiced: <span id="hoursValue">{hoursPracticed}</span>
-      </div>
+      </div> */}
       {!isEditing && resumeName && (
         <div>
           <p>Resume on file: {resumeName}</p> {/* Show saved resume name */}

@@ -1,18 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
-import { faVideo, faUser, faBook } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faBook } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <ul>
-        <li>
-          <Link to="/">
-            <FontAwesomeIcon icon={faVideo} />
-          </Link>
-        </li>
         <li>
           <Link to="/problems">
             <FontAwesomeIcon icon={faBook} />

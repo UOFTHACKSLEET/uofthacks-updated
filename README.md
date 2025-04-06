@@ -4,6 +4,8 @@ Refyne is an innovative application designed to help users prepare for behaviora
 
 **Demo** [DoraHacks Link](https://dorahacks.io/buidl/21723)
 
+[![Watch the video](https://img.youtube.com/vi/MnUqhKQDkMc/maxresdefault.jpg)](https://youtu.be/MnUqhKQDkMc)
+
 ---
 
 ## **Features**
